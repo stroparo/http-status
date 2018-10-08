@@ -1,8 +1,11 @@
-# Hello CI
+# Http Status Server
 
-A simple hello-world-ish demo of a CI pipeline. Just add this repository as the source of your pipeline (Jenkinsfile) in Jenkins and you are good to go!
+A simple app to return the status of some URLs.
 
-## Requirements
+## Requirement
 
-* Docker
-* Jenkins 2+
+* Jenkins 2+ service with Docker installed.
+
+## How to build
+
+Just add this repository as the source of a pipeline project of yours in Jenkins.
