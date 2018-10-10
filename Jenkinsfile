@@ -56,7 +56,7 @@ pipeline {
 
     post {
       always {
-        node {
+        node('master') {
           archiveArtifacts artifacts: 'build'
         }
       }
