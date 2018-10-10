@@ -31,7 +31,7 @@ public class HttpStatusServer extends AbstractVerticle {
 
   public static String getStatus(String url) {
     String result = "";
-    int code = 200;
+
     try {
       URL siteURL = new URL(url);
       HttpURLConnection connection = (HttpURLConnection) siteURL.openConnection();
