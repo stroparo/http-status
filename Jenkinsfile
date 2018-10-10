@@ -54,12 +54,5 @@ pipeline {
 
     }
 
-    post {
-      always {
-        node('master') {
-          archiveArtifacts artifacts: 'build'
-        }
-      }
-    }
 }
 
