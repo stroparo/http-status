@@ -14,7 +14,7 @@ public class HttpStatusServer extends AbstractVerticle {
     "https://www.noaa.gov/"
   };
 
-  public void start() throws IOException {
+  public void start() {
     vertx.createHttpServer().requestHandler(req -> {
 
       String responseText = "";
@@ -29,7 +29,7 @@ public class HttpStatusServer extends AbstractVerticle {
     }).listen(8080);
   }
 
-  public static String getStatus(String url) throws IOException {
+  public static String getStatus(String url) {
     String result = "";
     int code = 200;
     try {
