@@ -45,8 +45,6 @@ pipeline {
                 echo "Using Docker image '${container_image_name}'"
                 echo "Removing running instances"
 
-                // TODO Refactor this to handle it efficiently
-
                 sh "docker stop ${project_name} || true"
                 sh "docker rm ${project_name} || true"
                 sh "!(docker ps | grep -q ${project_name})"
