@@ -2,7 +2,7 @@
 
 project_name = 'http-status'
 container_image_name = 'stroparo/http-status'
-docker_host_port = 8000
+docker_host_port = 80
 docker_container_port = 4321
 
 pipeline {
