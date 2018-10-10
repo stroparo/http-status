@@ -5,7 +5,7 @@ public class HttpStatusServer extends AbstractVerticle {
     vertx.createHttpServer().requestHandler(req -> {
       req.response()
         .putHeader("content-type", "text/plain")
-        .end("Hello Vert.x!");
+        .end("Hello Vert.x yay!");
     }).listen(8080);
   }
 }
