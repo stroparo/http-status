@@ -1,8 +1,8 @@
 #!/usr/bin/env groovy
 
-project_name = 'httpstatus'
-container_image_name = 'stroparo/httpstatus'
-docker_host_port = 80
+project_name = 'http-status'
+container_image_name = 'stroparo/http-status'
+docker_host_port = 8000
 docker_container_port = 4321
 
 pipeline {
@@ -23,7 +23,7 @@ pipeline {
 
     stages {
 
-        stage("Build ${project_name} app") {
+        stage("Build app") {
             agent any
             steps {
                 cleanWs()
@@ -32,7 +32,7 @@ pipeline {
             }
         }
 
-        stage('Build ${project_name} container') {
+        stage('Build container') {
             agent any
             steps {
                 sh "docker build -f Dockerfile -t ${container_image_name} ."
