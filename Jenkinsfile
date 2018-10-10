@@ -52,6 +52,12 @@ pipeline {
             }
         }
 
+        post {
+          always {
+            archiveArtifacts artifacts: 'buildS'
+          }
+        }
+
     }
 }
 
