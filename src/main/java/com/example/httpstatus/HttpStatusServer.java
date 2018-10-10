@@ -1,3 +1,5 @@
+package com.stroparo.utils;
+
 import io.vertx.core.AbstractVerticle;
 
 public class HttpStatusServer extends AbstractVerticle {

@@ -28,7 +28,7 @@ pipeline {
             steps {
                 cleanWs()
                 checkout scm
-                sh './gradlew build installDist'
+                sh './gradlew shadowJar'
             }
         }
 
