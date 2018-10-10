@@ -20,7 +20,7 @@ public class HttpStatusServer extends AbstractVerticle {
       String responseText = "";
 
       for (String url : websiteUrls) {
-        response += url + " : " + getStatus(url) + "\n";
+        responseText += url + " : " + getStatus(url) + "\n";
       }
 
       req.response()
