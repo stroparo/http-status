@@ -39,7 +39,7 @@ public class HttpStatusServer extends AbstractVerticle {
       connection.setConnectTimeout(3000);
       connection.connect();
 
-      result = (String) connection.getResponseCode();
+      result = Integer.toString(connection.getResponseCode());
     } catch (Exception e) {
       result = "Bad URL error: " + e.getMessage();
     }
