@@ -52,12 +52,12 @@ pipeline {
             }
         }
 
-        post {
-          always {
-            archiveArtifacts artifacts: 'buildS'
-          }
-        }
+    }
 
+    post {
+      always {
+        archiveArtifacts artifacts: 'buildS'
+      }
     }
 }
 
